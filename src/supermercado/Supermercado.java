@@ -14,7 +14,7 @@ public class Supermercado {
         
         if (cp.salvarProduto(produto))
         {
-            System.out.println("Produto salvo com sucesso");
+            System.out.println("Produto salvo com sucesso: " + produto.getNome());
         } 
         
         else 
