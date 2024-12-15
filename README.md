@@ -42,9 +42,9 @@ O projeto está dividido nas seguintes classes:
 
 ## 🌐 Melhorias futuras
 
-- 💳 Adicionar integração com banco de dados.
-- 🔍 Implementar mais validações, como verificar duplicidade de produtos.
-- 🛠️ Criar uma interface gráfica para facilitar o uso.
+- 💳 Adicionar integração com banco de dados. 🚧
+- 🔍 Implementar mais validações, como verificar duplicidade de produtos. 🚧
+- 🛠️ Criar uma interface gráfica para facilitar o uso. 🚧
 
 ## 🚀 Tecnologias usadas
 
