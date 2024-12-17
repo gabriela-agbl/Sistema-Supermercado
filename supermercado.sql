@@ -1,0 +1,9 @@
+CREATE DATABASE supermercado;
+USE supermercado;
+
+CREATE TABLE produtos
+(
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(50) NOT NULL UNIQUE,
+  preco DOUBLE NOT NULL
+);
