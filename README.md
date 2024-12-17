@@ -20,10 +20,18 @@ O projeto está dividido nas seguintes classes:
 2. **ProdutoController**
    - Contém a lógica de validação e salvamento do produto.
    - Método principal: `salvarProduto()`.
+  
+3. **ProdutoDAO**
+   - Responsável pela interação com o banco de dados.
+   - Métodos: `produtoExiste()`, `inserirProduto()`, e uma rápida conexão com o banco de dados.
+  
+4. **ProdutoView**
+   - Interface gráfica do sistema, construída com Swing.
+   - Permite cadastrar produtos e exibe mensagens de sucesso ou erro.
 
-3. **Supermercado**
+5. **Supermercado**
    - Classe principal com o método `main()`.
-   - Cria produtos e utiliza o `ProdutoController` para gerenciá-los.
+   - Inicializa a interface gráfica
 
 ## 📚 Como usar
 
@@ -31,25 +39,38 @@ O projeto está dividido nas seguintes classes:
    ```bash
    git clone https://github.com/Agbl09/Sistema-Supermercado.git
    ```
-2. Compile e execute o projeto em um ambiente Java:
+2. Configure o banco de dados MySQL:
+   - Crie uma base de dados chamada `supermercado`.
+   - Execute o script SQL para criar a tabela de produtos:
+     ```sql
+     CREATE TABLE produtos (
+     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+     nome VARCHAR(100) NOT NULL,
+     preco DOUBLE NOT NULL
+     );
+     ```
+3. Compile e execute o projeto em um ambiente Java:
    ```bash 
    javac -d . *.java
    java supermercado.Supermercado
    ```
-3. Observe a saída no console:
-   - Caso o produto seja válido, você verá: `Produto salvo com sucesso: nome do produto`
-   - Caso contrário: `Erro ao salvar produto`
-
+4. Use a interface gráfica para cadastrar produtos
+   
 ## 🌐 Melhorias futuras
 
-- 💳 Adicionar integração com banco de dados. 🚧
-- 🔍 Implementar mais validações, como verificar duplicidade de produtos. 🚧
-- 🛠️ Criar uma interface gráfica para facilitar o uso. 🚧
+- 💳 Adicionar integração com banco de dados. ✅
+- 🔍 Implementar mais validações, como verificar duplicidade de produtos. ✅
+- 🛠️ Criar uma interface gráfica para facilitar o uso. ✅
+- 🔄 Implementar funcionalidades de atualização e exclusão de produtos. 🚧
+- 🔍 Adicionar filtros para pesquisa de produtos. 🚧
+- 🛠️ Melhorar a interface gráfica para torná-la mais amigável. 🚧
 
 ## 🚀 Tecnologias usadas
 
 - Java: Linguagem principal do projeto.
 - Git: Controle de versão.
+- MySQL: Banco de dados utilizado.
+- Swing: Biblioteca gráfica para a interface de usuário.
 
 ## 📢 Contribuições
 
