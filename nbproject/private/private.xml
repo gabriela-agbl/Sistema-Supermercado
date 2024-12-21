@@ -4,8 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Gabriela/Downloads/Senac/Supermercado/src/supermercado/ProdutoController.java</file>
+            <file>file:/C:/Users/Gabriela/Downloads/Senac/Supermercado/src/supermercado/ProdutoDAO.java</file>
+            <file>file:/C:/Users/Gabriela/Downloads/Senac/Supermercado/src/supermercado/view/ProdutoView.java</file>
             <file>file:/C:/Users/Gabriela/Downloads/Senac/Supermercado/src/supermercado/ProdutoEntity.java</file>
-            <file>file:/C:/Users/Gabriela/Downloads/Senac/Supermercado/src/supermercado/ProdutoEntityjava</file>
+            <file>file:/C:/Users/Gabriela/Downloads/Senac/Supermercado/src/supermercado/conectaDAO.java</file>
             <file>file:/C:/Users/Gabriela/Downloads/Senac/Supermercado/src/supermercado/Supermercado.java</file>
         </group>
     </open-files>

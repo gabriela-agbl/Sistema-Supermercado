@@ -29,6 +29,28 @@ public class ProdutoDAO
             return false;
         }
     }
+    
+    //Método para atualizar um produto no banco
+    public boolean atualizarProduto(ProdutoEntity produto)
+    {
+        String sql = "UPDATE produtos SET nome= ?, preco= ? WHERE id= ?";
+        
+        try(Connection conn = conexao.connectDB();
+            PreparedStatement stmt = conn.prepareStatement(sql))    
+        {
+            stmt.setString(1, produto.getNome());
+            stmt.setDouble(2, produto.getPreco());
+            stmt.setInt(3, produto.getId());
+            stmt.executeUpdate();
+            return true;
+        }
+        
+        catch(SQLException e)
+        {
+            System.out.println("Erro ao atualizar produto: " + e.getMessage());
+            return false;
+        }
+    }
 
     // Método para verificar se o produto já existe
     public boolean produtoExiste(String nome) 
