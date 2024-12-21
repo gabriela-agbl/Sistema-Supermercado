@@ -1,5 +1,8 @@
 package supermercado;
 
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+
 
 public class ProdutoController 
 {
@@ -37,5 +40,26 @@ public class ProdutoController
             return false;
         }
     }
-      
+    
+    public DefaultTableModel buscarProdutos(String filtro) 
+    {
+        ProdutoDAO dao = new ProdutoDAO(); // Chama o DAO
+        List<ProdutoEntity> produtos = dao.buscarProdutos(filtro); // Busca produtos filtrados
+
+        // Definir colunas da tabela
+        String[] colunas = {"ID", "Nome", "Preço"};
+
+        // Preencher dados da tabela
+        Object[][] dados = new Object[produtos.size()][3];
+        
+        for (int i = 0; i < produtos.size(); i++) 
+        {
+            ProdutoEntity produto = produtos.get(i);
+            dados[i][0] = produto.getId();
+            dados[i][1] = produto.getNome();
+            dados[i][2] = produto.getPreco();
+        }
+
+        return new DefaultTableModel(dados, colunas); // Retorna o modelo da tabela
+    } 
 }
