@@ -247,6 +247,9 @@
                   <Connection code="buscarProdutos()" type="code"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTable1FocusGained"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

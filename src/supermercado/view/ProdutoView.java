@@ -11,9 +11,21 @@ public class ProdutoView extends javax.swing.JFrame {
 
     public ProdutoView() {
         initComponents();
+        
+        // Atualiza a tabela ao clicar nela
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() 
+        {
+           @Override
+           public void mouseClicked(java.awt.event.MouseEvent evt) 
+           {
+               if (evt.getClickCount() == 1) 
+               { // Clique simples
+                   atualizarTabela();
+               }
+           }
+       });
     }
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -96,6 +108,11 @@ public class ProdutoView extends javax.swing.JFrame {
         jLabel4.setText("Lista de Produtos");
 
         jTable1.setModel(buscarProdutos());
+        jTable1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTable1FocusGained(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -208,6 +225,10 @@ public class ProdutoView extends javax.swing.JFrame {
     private void btnFiltroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiltroActionPerformed
         buscarProdutos();
     }//GEN-LAST:event_btnFiltroActionPerformed
+
+    private void jTable1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTable1FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable1FocusGained
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -375,4 +396,19 @@ public class ProdutoView extends javax.swing.JFrame {
        
        return modelo;
     }
+    
+    private void atualizarTabela() 
+    {
+       DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+       modelo.setRowCount(0); // Limpa os dados da tabela
+       ProdutoDAO produtoDAO = new ProdutoDAO();
+
+       List<ProdutoEntity> produtos = produtoDAO.buscarProdutos(""); // Busca atualizada do banco
+
+       for (ProdutoEntity produto : produtos) 
+       {
+           modelo.addRow(new Object[]{produto.getId(), produto.getNome(), produto.getPreco()});
+       }
+    }
+    
 }
