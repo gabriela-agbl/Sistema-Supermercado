@@ -107,7 +107,6 @@ public class ProdutoView extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         jLabel4.setText("Lista de Produtos");
 
-        jTable1.setModel(buscarProdutos());
         jTable1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTable1FocusGained(evt);
@@ -223,7 +222,21 @@ public class ProdutoView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAtualizarActionPerformed
 
     private void btnFiltroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiltroActionPerformed
-        buscarProdutos();
+        String filtro = txtFiltro.getText().trim(); // Obtém o texto do campo de pesquisa
+        ProdutoController controller = new ProdutoController();
+
+        // Obtem o modelo da tabela filtrado
+        DefaultTableModel modelo = controller.buscarProdutos(filtro);
+
+        if (modelo.getRowCount() > 0) 
+        {
+            jTable1.setModel(modelo); // Atualiza o modelo na tabela
+        } 
+        
+        else 
+        {
+            JOptionPane.showMessageDialog(this, "Nenhum produto encontrado com o filtro: " + filtro);
+        }
     }//GEN-LAST:event_btnFiltroActionPerformed
 
     private void jTable1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTable1FocusGained
@@ -387,16 +400,6 @@ public class ProdutoView extends javax.swing.JFrame {
         }
     }
 
-    public DefaultTableModel buscarProdutos() 
-    {
-       String filtro = txtFiltro.getText(); // Obtém o texto digitado no campo de pesquisa
-       ProdutoController controller = new ProdutoController(); // Instancia o controlador
-
-       DefaultTableModel modelo = controller.buscarProdutos(filtro); // Obtém os produtos filtrados
-       
-       return modelo;
-    }
-    
     private void atualizarTabela() 
     {
        DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
