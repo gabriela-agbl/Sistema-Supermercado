@@ -290,6 +290,21 @@ public class ProdutoView extends javax.swing.JFrame {
             ProdutoController controller = new ProdutoController();
             ProdutoDAO produtoDAO = new ProdutoDAO();
             
+            if (produto.getNome() == null || produto.getNome().isEmpty()) 
+            {
+                JOptionPane.showMessageDialog(this, "O nome do produto não pode ser vazio.");
+            }
+
+            if (produto.getPreco() <= 0) 
+            {
+                JOptionPane.showMessageDialog(this, "O preço deve ser maior que zero.");
+            }
+
+            if (produtoDAO.produtoExiste(produto.getNome())) 
+            {
+                JOptionPane.showMessageDialog(this, "Produto já existe no banco de dados.");
+            }
+            
             if(controller.salvarProduto(produto))
             {
                 JOptionPane.showMessageDialog(this, "Produto salvo com sucesso!");
@@ -300,23 +315,8 @@ public class ProdutoView extends javax.swing.JFrame {
             {
                 JOptionPane.showMessageDialog(this, "Erro ao salvar o produto.");
             }
-            
-            if (produto.getNome() == null || produto.getNome().isEmpty()) 
-            {
-                JOptionPane.showMessageDialog(this, "O nome do produto não pode ser vazio.");
-            }
-
-        if (produto.getPreco() <= 0) 
-            {
-                JOptionPane.showMessageDialog(this, "O preço deve ser maior que zero.");
-            }
-
-        if (produtoDAO.produtoExiste(produto.getNome())) 
-            {
-                JOptionPane.showMessageDialog(this, "Produto já existe no banco de dados.");
-            }
         }
-        catch(NumberFormatException ex)
+            catch(NumberFormatException ex)
             {
                 JOptionPane.showMessageDialog(this, "Preço inválido!");
             }
