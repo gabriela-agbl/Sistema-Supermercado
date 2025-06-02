@@ -1,5 +1,5 @@
 <div align="center">
-<h2>✨ Projeto Supermercado ✨</h2>
+<h1>✨ Projeto Supermercado ✨</h1>
 
 Bem-vindo ao repositório do projeto **Supermercado**! Este projeto é uma aplicação simples que simula o cadastro de produtos em um sistema utilizando Java. ☕
 </div>
