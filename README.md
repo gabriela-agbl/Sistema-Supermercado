@@ -1,16 +1,22 @@
-# ✨ Projeto Supermercado ✨
+<div align="center">
+<h2>✨ Projeto Supermercado ✨</h2>
 
 Bem-vindo ao repositório do projeto **Supermercado**! Este projeto é uma aplicação simples que simula o cadastro de produtos em um sistema utilizando Java. ☕
+</div>
 
-## ⚖️ Funcionalidades
+<div align="center">
+<h2>⚖️ Funcionalidades</h2>
+</div>
 
 - 🖊️ Criar e gerenciar objetos de produtos com atributos como **id**, **nome** e **preço**.
 - ✅ Validar produtos antes de salvá-los.
 - 📊 Exibir mensagens de sucesso ou erro ao salvar os produtos.
 
-## 🔧 Estrutura do Projeto
+<div align="center">
+<h2>🔧 Estrutura do Projeto</h2>
 
 O projeto está dividido nas seguintes classes:
+</div>
 
 1. **ProdutoEntity**
    - Representa o modelo de dados do produto.
@@ -33,7 +39,9 @@ O projeto está dividido nas seguintes classes:
    - Classe principal com o método `main()`.
    - Inicializa a interface gráfica
 
-## 📚 Como usar
+<div align="center">
+<h2>📚 Como usar</h2>
+</div>
 
 1. Clone este repositório:
    ```bash
@@ -56,7 +64,9 @@ O projeto está dividido nas seguintes classes:
    ```
 4. Use a interface gráfica para cadastrar produtos
    
-## 🌐 Melhorias futuras
+<div align="center">
+<h2>🌐 Melhorias futuras</h2>
+</div>
 
 - 💳 Adicionar integração com banco de dados. ✅
 - 🔍 Implementar mais validações, como verificar duplicidade de produtos. ✅
@@ -65,26 +75,36 @@ O projeto está dividido nas seguintes classes:
 - 🔍 Adicionar filtros para pesquisa de produtos. ✅
 - 🛠️ Melhorar a interface gráfica para torná-la mais amigável. ✅
 
-## 🚀 Tecnologias usadas
+<div align="center">
+<h2>🚀 Tecnologias usadas</h2>
+</div>
 
 - Java: Linguagem principal do projeto.
 - Git: Controle de versão.
 - MySQL: Banco de dados utilizado.
 - Swing: Biblioteca gráfica para a interface de usuário.
 
-## 📢 Contribuições
+<div align="center">
+<h2>📢 Contribuições</h2>
 
 Contribuições são bem-vindas! Siga os passos:
+</div>
 
 1. Faça um fork do repositório.
 2. Crie uma branch para sua funcionalidade: `git checkout -b minha-feature`.
 3. Submeta um pull request explicando suas alterações. 📝
 
-## 📊 Status do projeto
+<div align="center">
+<h2>📊 Status do projeto</h2>
 
-Atualmente em desenvolvimento 🟡. Mais recursos serão adicionados em breve!
+Atualmente em desenvolvimento 🟡.<br> 
+Mais recursos serão adicionados em breve!
+</div>
 
-## 📝 Licença
-   Este projeto foi desenvolvido para fins educacionais e está disponível para uso e modificação conforme necessário.
+<div align="center">
+<h2>📝 Licença</h2>
+   Este projeto foi desenvolvido para fins educacionais e está disponível para uso e modificação conforme necessário.<br>
 
    Feito por [Gabriela Rodrigues](https://github.com/Agbl09)
+
+</div>
