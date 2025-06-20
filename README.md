@@ -97,7 +97,7 @@ Contribuições são bem-vindas! Siga os passos:
 <div align="center">
 <h2>📊 Status do projeto</h2>
 
-Atualmente em desenvolvimento 🟡.<br> 
+Projeto Entregue 🟢.<br> 
 Mais recursos serão adicionados em breve!
 </div>
 
