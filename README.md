@@ -5,6 +5,13 @@ Bem-vindo ao repositório do projeto **Supermercado**! Este projeto é uma aplic
 </div>
 
 <div align="center">
+<h2>📊 Status do projeto</h2>
+
+Projeto Entregue 🟢.<br> 
+Mais recursos serão adicionados em breve!
+</div>
+
+<div align="center">
 <h2>⚖️ Funcionalidades</h2>
 </div>
 
@@ -93,13 +100,6 @@ Contribuições são bem-vindas! Siga os passos:
 1. Faça um fork do repositório.
 2. Crie uma branch para sua funcionalidade: `git checkout -b minha-feature`.
 3. Submeta um pull request explicando suas alterações. 📝
-
-<div align="center">
-<h2>📊 Status do projeto</h2>
-
-Projeto Entregue 🟢.<br> 
-Mais recursos serão adicionados em breve!
-</div>
 
 <div align="center">
 <h2>📝 Licença</h2>
