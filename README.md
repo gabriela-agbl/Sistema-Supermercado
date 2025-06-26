@@ -105,6 +105,6 @@ Contribuições são bem-vindas! Siga os passos:
 <h2>📝 Licença</h2>
    Este projeto foi desenvolvido para fins educacionais e está disponível para uso e modificação conforme necessário.<br>
 
-   Feito por [Gabriela Rodrigues](https://github.com/Agbl09)
+   Feito por [Gabriela Rodrigues](https://github.com/gabriela-agbl)
 
 </div>
