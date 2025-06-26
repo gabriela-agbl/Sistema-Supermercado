@@ -52,7 +52,7 @@ O projeto está dividido nas seguintes classes:
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/Agbl09/Sistema-Supermercado.git
+   git clone https://github.com/gabriela-agbl/Sistema-Supermercado.git
    ```
 2. Configure o banco de dados MySQL:
    - Crie uma base de dados chamada `supermercado`.
